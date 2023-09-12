@@ -9,6 +9,12 @@
 body {
     background-color: #afcdeb;
 }
+h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #5b7fa2;
+    background-color: #FFFFFD;
+}
 .container {
     background-color: #FFFFFD;
     width: 90vmin;

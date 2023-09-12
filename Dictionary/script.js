@@ -4,7 +4,7 @@ const sound = document.getElementById("sound");
 const btn = document.getElementById("search-button");
 
 
-btn.addEventListener("click", () => {
+function searchWord() {
     let inpWord = document.getElementById("inp-word").value;
     fetch(`${url}${inpWord}`)
         .then((response) => response.json())
@@ -33,7 +33,20 @@ btn.addEventListener("click", () => {
         .catch(() => {
             result.innerHTML = `<h3 class="error">Word not found.</h3>`;
         });
+        ``
+}
+
+window.addEventListener("keyup", (element) => {
+    if(element.key == "Enter"){
+        searchWord();
+    }
+})
+
+btn.addEventListener("click", () => {
+        searchWord();
 });
+
+
 function playSound(){
     sound.play();
 }
